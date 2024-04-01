@@ -1,0 +1,26 @@
+<app-loading *ngIf="loadin"></app-loading>
+
+<div *ngIf="error" class="alert alert-danger animated fadeIn">
+  <h3>Error</h3>
+  <p>
+    {{messageError}}
+  </p>
+</div>
+
+<app-tarjetas [items]="nuevasCanciones"></app-tarjetas>
+<!-- <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div *ngFor="let cancion of nuevasCanciones" class="col">
+        <div class="card">
+          <img [src]="cancion.images[0].url" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{cancion.name}}</h5>
+            <p class="card-text">
+                <span class="badge text-bg-primary" *ngFor="let artista of cancion.artists">{{artista.name}}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+</div> -->
+<!-- <ul>
+    <li *ngFor="let pais of paises">{{pais.name.official}} - {{pais.population | number}}</li>
+</ul> -->
